@@ -1,2 +1,2 @@
-library 'pipeline-library@v1.0'
+library 'pipeline-library@develop'
 pipelines 'microservicio'
