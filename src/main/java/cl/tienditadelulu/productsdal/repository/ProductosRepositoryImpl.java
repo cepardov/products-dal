@@ -23,11 +23,12 @@ public class ProductosRepositoryImpl implements ProductosRepository {
     public List<ProductoDto> obtenerCatalogo(int productActive) {
         ArrayList<Object> params = new ArrayList<>(Collections.emptyList());
         StringBuilder sql = new StringBuilder();
-        sql.append("select p.id_product,p.ean13,p.price,p.active,p.condition,p.visibility,p.available_date,pl.name,");
+        sql.append("select p.id_product,p.ean13,p.price,p.active,p.condition,p.visibility,p.available_date,pl.name,m.name as 'manufacturer',");
         sql.append("pl.meta_description,sa.quantity,");
         sql.append("concat('https://', su.domain, '/', cl.link_rewrite, '/', p.id_product, '-', pl.link_rewrite, '-', p.ean13) as link ");
-        sql.append("from ps_shop_url su,ps_product p,ps_product_lang pl,ps_stock_available sa,ps_category_lang cl ");
+        sql.append("from ps_shop_url su,ps_product p,ps_product_lang pl,ps_stock_available sa,ps_category_lang cl,ps_manufacturer m ");
         sql.append("where pl.id_product = p.id_product and sa.id_product = p.id_product ");
+        sql.append("and m.id_manufacturer = p.id_manufacturer ");
         sql.append("and cl.id_category = p.id_category_default and p.active = ?");
 
         params.add(productActive);

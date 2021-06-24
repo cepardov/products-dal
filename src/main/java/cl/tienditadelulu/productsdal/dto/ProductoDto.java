@@ -17,6 +17,7 @@ public class ProductoDto {
     private String visibility;
     private Date availableDate;
     private String name;
+    private String manufacturer;
     private String metaDescription;
     private int quantity;
     private String link;

@@ -19,6 +19,7 @@ public class CatalogoRowMapper implements RowMapper<ProductoDto> {
                 .visibility(rs.getString("visibility"))
                 .availableDate(rs.getDate("available_date"))
                 .name(rs.getString("name"))
+                .manufacturer(rs.getString("manufacturer"))
                 .metaDescription(rs.getString("meta_description"))
                 .quantity(rs.getInt("quantity"))
                 .link(rs.getString("link"))

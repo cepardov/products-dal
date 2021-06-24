@@ -37,6 +37,7 @@ public class ProductosServiceImpl implements ProductosService {
                     .visibility(productoDto.getVisibility())
                     .availableDate(productoDto.getAvailableDate())
                     .name(productoDto.getName())
+                    .manufacturer(productoDto.getManufacturer())
                     .metaDescription(description(productoDto.getMetaDescription()))
                     .quantity(productoDto.getQuantity())
                     .link(productoDto.getLink())
