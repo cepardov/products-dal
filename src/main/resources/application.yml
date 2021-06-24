@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mariadb://192.168.1.3:3306/pshop
     username: ${DB_USERNAME:apiservice}
-    password: ${DB_PASSWORD:wip015ykC1}
+    password: ${DB_PASSWORD:wip015YkC1}
     driver-class-name: org.mariadb.jdbc.Driver
     tomcat:
       initial-size: 3
